@@ -1,18 +1,13 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-format = """$all$git_branch$git_status$character"""
+format = """$directory$package$all$git_branch$git_status$character"""
 
 
 [character]
 success_symbol = "[](bold green)"
-error_symbol = "[✗](bold red) "
+error_symbol = "[](bold red) "
 vicmd_symbol = "[](bold green) "
-
-
-[package]
-disabled = true
-symbol = "pkg "
 
 
 [battery]
@@ -22,27 +17,32 @@ discharging_symbol = "💀 "
 
 
 [cmd_duration]
-min_time = 100
-format = " took [$duration](bold yellow)"
+min_time = 500
+format = "took [$duration](bold yellow)"
 
 
 [[battery.display]]
 threshold = 10
 style = "bold red"
 
+[hostname]
+ssh_only = false
+format =  "[$hostname](bold cyan) "
+trim_at = ".companyname.com"
+disabled = true
 
 [directory]
-format = "[ $path]($style)[$read_only]($read_only_style) "
+format = "[$path]($style)[$read_only]($read_only_style) "
 style = "bold blue"
-
+disabled = true
 
 [git_branch]
-format = "[$branch]($style) "
+format = "[$symbol$branch]($style) "
 symbol = " "
 
 [git_status]
-format = '([{$all_status$ahead_behind}]($style) )'
-style = "bold red"
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold yellow"
 ahead = ">"
 behind = "<"
 diverged = "<>"
@@ -57,88 +57,81 @@ disabled = false
 
 
 [aws]
-symbol = "aws "
-
-[cobol]
-symbol = "cobol "
+symbol = "  "
 
 [conda]
-symbol = "conda "
+symbol = " "
 
-[crystal]
-symbol = "cr "
-
-[cmake]
-symbol = "cmake "
+[package]
+symbol = " "
 
 [dart]
-symbol = "dart "
-
-[deno]
-symbol = "deno "
-
-[dotnet]
-symbol = ".NET "
-
-[rust]
-symbol = "rs "
-style = "bold #F88A3E"
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [docker_context]
-symbol = "docker "
+symbol = " "
 
 [elixir]
-symbol = "exs "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [elm]
-symbol = "elm "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [golang]
-symbol = "go "
-style = "bold #70D1EA"
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [java]
-symbol = "java "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [julia]
-symbol = "jl "
-
-[kotlin]
-symbol = "kt "
-
-[nodejs]
-symbol = "nodejs "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [memory_usage]
-symbol = "memory "
+symbol = " "
 
 [nim]
-symbol = "nim "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [nix_shell]
-symbol = "nix "
-
-[ocaml]
-symbol = "ml "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [perl]
-symbol = "pl "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [php]
-symbol = "php "
-
-[purescript]
-symbol = "purs "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [python]
-symbol = "py "
-style = "bold #78EDC5"
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [ruby]
-symbol = "rb "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
+
+[rust]
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [scala]
-symbol = "scala "
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
+
+[shlvl]
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
 
 [swift]
-symbol = "swift "
+symbol = "ﯣ "
+format = 'via \[[$symbol($version)]($style)\] '
+
