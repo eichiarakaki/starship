@@ -1,15 +1,19 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[✗](bold red) "
-vicmd_symbol = "[](bold green) "
+format = """$all$git_branch$git_status$character"""
 
-# Disable the package module, hiding it from the prompt completely
+
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[✗](bold red) "
+vicmd_symbol = "[](bold green) "
+
+
 [package]
 disabled = true
+symbol = "pkg "
+
 
 [battery]
 full_symbol = "ﮣ "
@@ -19,7 +23,7 @@ discharging_symbol = "💀 "
 
 [cmd_duration]
 min_time = 100
-format = "took [$duration](bold yellow)"
+format = " took [$duration](bold yellow)"
 
 
 [[battery.display]]
@@ -28,12 +32,12 @@ style = "bold red"
 
 
 [directory]
-format = "[$path]($style)[$read_only]($read_only_style) "
-style = "bold cyan"
+format = "[ $path]($style)[$read_only]($read_only_style) "
+style = "bold blue"
 
 
 [git_branch]
-format = "on [$symbol$branch]($style) "
+format = "[$branch]($style) "
 symbol = " "
 
 [git_status]
@@ -42,13 +46,99 @@ style = "bold red"
 ahead = ">"
 behind = "<"
 diverged = "<>"
+up_to_date = ""
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
 renamed = "r"
 deleted = "x"
+disabled = false
 
+
+[aws]
+symbol = "aws "
+
+[cobol]
+symbol = "cobol "
+
+[conda]
+symbol = "conda "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[dart]
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
 
 [rust]
-format = "via [$symbol($version)]($style)"
-symbol = "R "
-detect_files = ["Cargo.toml"]
+symbol = "rs "
 style = "bold #F88A3E"
 
+[docker_context]
+symbol = "docker "
+
+[elixir]
+symbol = "exs "
+
+[elm]
+symbol = "elm "
+
+[golang]
+symbol = "go "
+style = "bold #70D1EA"
+
+[java]
+symbol = "java "
+
+[julia]
+symbol = "jl "
+
+[kotlin]
+symbol = "kt "
+
+[nodejs]
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[purescript]
+symbol = "purs "
+
+[python]
+symbol = "py "
+style = "bold #78EDC5"
+
+[ruby]
+symbol = "rb "
+
+[scala]
+symbol = "scala "
+
+[swift]
+symbol = "swift "
