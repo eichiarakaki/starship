@@ -1,12 +1,54 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-format = "$all"
-
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
-success_symbol = "[>](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+success_symbol = "[](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[✗](bold red) "
+vicmd_symbol = "[](bold green) "
 
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+[battery]
+full_symbol = "ﮣ "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+
+[cmd_duration]
+min_time = 100
+format = "took [$duration](bold yellow)"
+
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "bold cyan"
+
+
+[git_branch]
+format = "on [$symbol$branch]($style) "
+symbol = " "
+
+[git_status]
+format = '([{$all_status$ahead_behind}]($style) )'
+style = "bold red"
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+
+
+[rust]
+format = "via [$symbol($version)]($style)"
+symbol = "R "
+detect_files = ["Cargo.toml"]
+style = "bold #F88A3E"
+
