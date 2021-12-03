@@ -1,7 +1,8 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-format = """$directory$package$all$git_branch$git_status$character"""
+format = """$directory$git_branch$git_status$character"""
+right_format = """$cmd_duration$package$all"""
 
 
 [character]
