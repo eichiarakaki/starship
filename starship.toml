@@ -104,6 +104,9 @@ format = 'via \[[$symbol($version)]($style)\] '
 symbol = " "
 format = 'via \[[$symbol($version)]($style)\] '
 
+[lua]
+format = ''
+
 [perl]
 symbol = " "
 format = 'via \[[$symbol($version)]($style)\] '
