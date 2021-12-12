@@ -65,6 +65,7 @@ symbol = " "
 
 [package]
 symbol = " "
+format = 'via \[[$symbol($version)]($style)\]'
 
 [dart]
 symbol = " "
@@ -72,6 +73,9 @@ format = 'via \[[$symbol($version)]($style)\] '
 
 [docker_context]
 symbol = " "
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
 
 [elixir]
 symbol = " "
