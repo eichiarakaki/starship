@@ -1,20 +1,20 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-format = """$directory$git_branch$git_status$character"""
-right_format = """$cmd_duration$package$all"""
+format = """$package$all$git_branch$git_status$character"""
+right_format = """$battery"""
 
 
 [character]
-success_symbol = "[](bold green)"
-error_symbol = "[](bold red) "
-vicmd_symbol = "[](bold green) "
+success_symbol = "[](bold green)[](bold cyan)[](bold green)"
+error_symbol = "[](bold red)[](bold purple)[](bold red)"
+vicmd_symbol = "[](bold green)"
 
 
 [battery]
-full_symbol = "ﮣ "
-charging_symbol = "⚡️ "
-discharging_symbol = "💀 "
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
 
 
 [cmd_duration]
@@ -23,8 +23,9 @@ format = "took [$duration](bold yellow)"
 
 
 [[battery.display]]
-threshold = 10
-style = "bold red"
+threshold = 100
+style = "bold green"
+
 
 [hostname]
 ssh_only = false
@@ -42,8 +43,8 @@ format = "[$symbol$branch]($style) "
 symbol = " "
 
 [git_status]
-format = '([$all_status$ahead_behind]($style) )'
-style = "bold yellow"
+format = '([\[$all_status$ahead_behind\]]($style)) '
+style = "bold red"
 ahead = ">"
 behind = "<"
 diverged = "<>"
@@ -65,7 +66,7 @@ symbol = " "
 
 [package]
 symbol = " "
-format = 'via \[[$symbol($version)]($style)\]'
+format = 'via \[[$symbol($version)]($style)\] '
 
 [dart]
 symbol = " "
@@ -75,7 +76,7 @@ format = 'via \[[$symbol($version)]($style)\] '
 symbol = " "
 
 [nodejs]
-format = '\[[$symbol($version)]($style)\]'
+format = 'via \[[$symbol($version)]($style)\]'
 
 [elixir]
 symbol = " "
