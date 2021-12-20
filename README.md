@@ -17,3 +17,6 @@ export STARSHIP_CONFIG=~/.config/starship/cache
 ```
 ---
 ## Preview
+
+![2021-12-20_13-15](https://user-images.githubusercontent.com/73294642/146711460-1964dc0f-5075-4085-8dd8-d2e1f23dd5fd.png)
+
