@@ -144,3 +144,6 @@ format = 'via \[[$symbol($version)]($style)\] '
 symbol = "ﯣ "
 format = 'via \[[$symbol($version)]($style)\] '
 
+[zig]
+symbol = " "
+format = 'via \[[$symbol($version)]($style)\] '
