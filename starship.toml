@@ -147,3 +147,6 @@ format = 'via \[[$symbol($version)]($style)\] '
 [zig]
 symbol = " "
 format = 'via \[[$symbol($version)]($style)\] '
+
+[vlang]
+format = 'via \[[$symbol($version)]($style)\] '
