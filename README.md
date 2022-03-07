@@ -13,7 +13,7 @@ set -x STARSHIP_CACHE ~/.config/starship/cache
 eval "$(starship init bash)"
 
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-export STARSHIP_CONFIG=~/.config/starship/cache
+export STARSHIP_CACHE=~/.config/starship/cache
 ```
 ---
 ## Preview
