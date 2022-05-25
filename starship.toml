@@ -21,12 +21,12 @@ discharging_symbol = " "
 
 
 [cmd_duration]
-min_time = 500
+min_time = 5000
 format = "took [$duration](bold yellow)"
 
 
 [[battery.display]]
-threshold = 100
+threshold = 10000
 style = "bold green"
 
 
