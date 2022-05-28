@@ -4,13 +4,14 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-format = """$package$all$git_branch$git_status$character"""
+#format = """$package$all$git_branch$git_status$character"""
+format = """$git_branch$git_status$package$all$character"""
 right_format = """$battery"""
 
 
 [character]
-success_symbol = "[](bold green)[](bold cyan)[](bold green)"
-error_symbol = "[](bold red)[](bold purple)[](bold red)"
+success_symbol = "[](bold red)[](bold yellow)[](bold green)"
+error_symbol = "[](bold red)[](bold red)[](bold red)"
 vicmd_symbol = "[](bold green)"
 
 
@@ -21,7 +22,7 @@ discharging_symbol = " "
 
 
 [cmd_duration]
-min_time = 5000
+min_time = 50000
 format = "took [$duration](bold yellow)"
 
 
@@ -43,11 +44,12 @@ disabled = true
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-symbol = " "
+symbol = " "
+style = "bold green"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style)) '
-style = "bold red"
+format = '([|$all_status$ahead_behind|]($style)) '
+style = "bold yellow"
 ahead = ">"
 behind = "<"
 diverged = "<>"
