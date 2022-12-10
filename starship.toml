@@ -1,11 +1,10 @@
-# Iosevka Nerd Font Complete.ttf
-# Iosevka-Nerd-Font.ttf
+# Fonts you need: nerd-fonts-complete
 
 # Inserts a blank line between shell prompts
 add_newline = true
 
-#format = """$package$all$git_branch$git_status$character"""
-format = """$git_branch$git_status$package$all$character"""
+format = """$package$all$git_branch$git_status$character"""
+# format = """$git_branch$git_status$package$all$character"""
 right_format = """$battery"""
 
 
@@ -44,12 +43,11 @@ disabled = true
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-symbol = " "
-style = "bold green"
+symbol = " "
 
 [git_status]
-format = '([|$all_status$ahead_behind|]($style)) '
-style = "bold yellow"
+format = '([\[$all_status$ahead_behind\]]($style)) '
+style = "bold red"
 ahead = ">"
 behind = "<"
 diverged = "<>"
