@@ -14,10 +14,10 @@ error_symbol = "[](bold red)[](bold red)[](bold red)"
 vicmd_symbol = "[](bold green)"
 
 
-[battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
+#[battery]
+#full_symbol = " "
+#charging_symbol = " "
+#discharging_symbol = " "
 
 
 [cmd_duration]
@@ -25,9 +25,9 @@ min_time = 50000
 format = "took [$duration](bold yellow)"
 
 
-[[battery.display]]
-threshold = 10000
-style = "bold green"
+#[[battery.display]]
+#threshold = 10000
+#style = "bold green"
 
 
 [hostname]
@@ -42,11 +42,11 @@ style = "bold blue"
 disabled = true
 
 [git_branch]
-format = "[$symbol$branch]($style) "
-symbol = " "
+format = "[on $branch]($style)"
+# symbol = " "
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style)) '
+format = '([ {$all_status$ahead_behind}]($style)) '
 style = "bold red"
 ahead = ">"
 behind = "<"
